@@ -1,0 +1,186 @@
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    background-color: #f7f7f7; /* Off white background color */
+}
+
+header {
+    background-color: #343a40;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 50px;
+    background-color: #dc3545;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+
+}
+
+nav ul li a {
+    color: #fff;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffa500; /* Change color on hover */
+}
+.about {
+    padding: 50px 0;
+    background-color: #f7f7f7; /* Off white background color */
+}
+
+.about h1 {
+    margin: 10px;
+    padding: 10px;
+    font-size: 5rem;
+    text-align: center;
+    color: #333; /* Darker color for better contrast */
+    color: #3a3a3a;
+    font-family: 'Georgia', serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+}
+
+.intro {
+    background-color: #f7f7f7; /* Off white background color */
+    color: #333; /* Dark text color */
+    padding: 40px; /* Padding */
+    margin: 20px 50px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow */
+}
+
+.intro p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f9f9f9; /* Light grey background */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transitions */
+}
+
+/* Add hover effect */
+.intro p:hover {
+    transform: scale(1.05); /* Scale up the paragraph on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow on hover */
+}
+
+
+.intro h1 {
+    font-size: 2rem; /* Smaller font size */
+    color: #333; /* Dark grey color */
+    margin-bottom: 20px;
+    text-align: center; /* Center align the text */
+}
+
+.aboutContent {
+    display: flex; /* Display children elements in a row */
+    background-color: #fff; /* White background color for better contrast */
+    border: 1px solid #ddd; /* Border color */
+    border-radius: 15px; /* More rounded border */
+    padding: 20px; /* Padding inside the div */
+    align-items: center; /* Vertically center content */
+    margin: 20px 50px; /* Add spacing between sections */
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition effects */
+}
+
+.aboutContent:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+}
+
+.aboutContent .aboutText {
+    flex: 2; /* Take up double the space */
+    padding: 0 20px; /* Add padding to separate text from edges */
+    font-size: 1.25rem;
+    line-height: 1.8;
+    text-align: center;
+    color: #555; /* Slightly lighter color for text */
+    font-family: 'Verdana', sans-serif;
+}
+
+.aboutText h4 {
+    margin-bottom: 20px; /* Add margin below each block of text */
+}
+
+.about-section {
+    text-align: center;
+    padding: 50px 5px;
+}
+
+.about-section h2 {
+    font-size: 3em;
+    margin-bottom: 40px;
+    color: #444;
+    letter-spacing: 3px;
+    color: #3a3a3a;
+    font-family: 'Georgia', serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .about h1 {
+        font-size: 3rem;
+    }
+
+    .aboutContent {
+        flex-direction: column; /* Stack elements vertically */
+        padding: 15px;
+    }
+
+    .aboutContent .aboutText {
+        padding: 10px 0;
+        font-size: 1rem;
+    }
+
+    .about-section h2 {
+        font-size: 2.5em;
+    }
+}
+
+@media (max-width: 480px) {
+    .about h1 {
+        font-size: 2.5rem;
+    }
+
+    .aboutContent .aboutText {
+        font-size: 0.9rem;
+    }
+
+    .about-section h2 {
+        font-size: 2em;
+    }
+}
+
+footer {
+    background-color: #343a40;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    width: 100%;
+}

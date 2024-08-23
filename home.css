@@ -1,0 +1,452 @@
+/* Importing Google font - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Farsan&display=swap')
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    background-image: url(images/popcornBg.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    backdrop-filter: blur(5px);
+    overflow: hidden;
+
+}
+.nav{
+    width: auto;
+    margin: 0;
+    padding: 0;
+}
+.navBar{
+    height: 50px;
+    width: 100%;
+}
+
+nav .navElements{
+    max-width: 1250px;
+    margin: auto;
+    margin-right: 10px ;
+    font-style: italic;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    height: 35px;
+}
+
+
+.navElements .logo {
+    font-size: 15px;
+}
+
+
+.navElements ul{
+    display: inline-flex;
+
+}
+
+.navElements ul li{
+    list-style: none;
+    margin-left: 7px;
+    
+}
+
+.navElements ul li a{
+    text-decoration: none;
+    color: white;
+    margin-top: 2px;
+    margin-right: 15px;
+    font-size: 25px;
+    font-weight: 500px;
+    padding: 3px 25px;
+    border-radius: 5px;
+
+}
+
+.navElements ul li a:hover{
+    background: #6a828d;
+    color: #000;
+
+}
+
+.logo img{
+    margin-top: 25px;
+    margin-left: -200px;
+    height: 45px;
+    width: 120px;
+    border: 2px solid #f1eded; /* Add border */
+    border-radius: 15%; /* Make it circular */
+    padding: 5px 10px;
+    transition: border-color 0.2s ease; /* Add transition for glow effect */
+}
+
+.logo img:hover {
+    border-color: #6a828d; /* Change border color on hover */
+    animation: glow 1.5s infinite alternate; /* Add glow animation on hover */
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 10px #6a828d; /* Start glow effect */
+    }
+    100% {
+        box-shadow: 0 0 20px #6a828d; /* End glow effect */
+    }
+}
+
+
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 65px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    z-index: 100000;
+    --webkit-backdrop-filter: blur(17px);
+    border-right: 1px solid rgba(255, 255, 255, 0.7);
+    transition: width 0.3s ease;
+}
+
+.sidebar:hover {
+    width: 220px;
+}
+
+.logo h2 {
+    font-size: 2.1rem;
+    font-weight: 600;
+    margin-left: 10px;
+    display: none;
+}
+
+.sidebar:hover .logo h2 {
+    display: block;
+}
+
+.sidebar .links {
+    list-style: none;
+    margin-top: 20px;
+    margin-left: -30px;
+    overflow-y: auto;
+    scrollbar-width: none;
+    height: calc(100% - 140px);
+}
+
+.sidebar .links::-webkit-scrollbar {
+    display: none;
+}
+
+.links li {
+    display: flex;
+    border-radius: 4px;
+    align-items: center;
+}
+
+.links li:hover {
+    cursor: pointer;
+    background: #fff;
+}
+
+
+.links hr {
+    margin: 15px 8px;
+    border: 1px solid #4c4c4c;
+}
+
+.sidebar:hover .links hr {
+    border-color: transparent;
+}
+
+.links li span {
+    padding: 15px 5px;
+}
+
+.links li a {
+    padding: 10px;
+    color: #000;
+    display: none;
+    font-weight: 500;
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+.sidebar:hover .links li a {
+    display: block;
+}
+
+.links .logout-link {
+    margin-top: 20px;
+} 
+
+.container::before {
+    content: "";
+    background: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    filter: blur(10px); /* Adjust blur level as needed */
+    z-index: -1;
+}
+
+.landing{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.landingText {
+    z-index: 1;
+    padding: 200px 0px ;
+}
+
+.landingText h1 {
+    font-size: 60px;
+    margin-bottom: 35px;
+    margin-left: -90px;
+    animation: fadeIn 5s infinite alternate;
+
+}
+
+@keyframes fadeIn {
+   0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+    
+.landing-text p {
+    font-size: 2rem;
+}
+
+.landingText h3{
+    color: #ffff99; /* Light yellow */
+    justify-self: right;
+}
+
+
+@keyframes lightning {
+    0% {
+        text-shadow: 0 0 0 transparent;
+    }
+    25% {
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.9);
+    }
+    50% {
+        text-shadow: 0 0 20px rgba(255, 255, 255, 0.9);
+    }
+    75% {
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.9);
+    }
+    100% {
+        text-shadow: 0 0 0 transparent;
+    }
+}
+
+.lightning-glow {
+    animation: lightning 2s infinite;
+}
+
+
+.about {
+    padding: 50px 0;
+    background-color: #f7f7f7; /* Off white background color */
+}
+
+
+.about h1{
+    margin: 10px;
+    padding: 10px;
+    font-size: 5rem;
+    text-align: center;
+
+}
+
+.aboutContent .aboutText {
+    flex: 2; /* Take up double the space */
+    padding: 0 20px; /* Add padding to separate text from edges */
+    font-size: 25px;
+    line-height: 2rem;
+    text-align: center;
+}
+
+.aboutContent {
+    display: flex; /* Display children elements in a row */
+    background-color: #f7f7f7; /* Off white background color */
+    border: 4px solid #ddd; /* Border color */
+    border-radius: 10px; /* Rounded border */
+    padding: 15px; /* Padding inside the div */
+    align-items: center; /* Vertically center content */
+}
+
+
+/* .coke {
+    width: 100px;
+    font-weight: bold;
+    position: relative;
+    animation: mymove 5s;
+    animation-fill-mode: forwards;
+  }
+  
+  .can1 {animation-timing-function: linear;}
+  .can2 {animation-timing-function: ease;}
+  .can3 {animation-timing-function: ease-in;}
+  .can4 {animation-timing-function: ease-out;}
+  
+  @keyframes mymove {
+    from {left: 0px;}
+    to {left: 100px;}
+  } */
+
+
+
+  /* CastMyBrand */
+  
+  
+  .about-section {
+    text-align: center;
+    padding: 50px 20px;
+  }
+  
+  .about-section h2 {
+    font-size: 3em;
+    margin-bottom: 40px;
+    color: #444;
+    letter-spacing: 3px;
+  }
+  
+  
+  
+
+  /* Existing styles... */
+
+/* Media Queries for Responsiveness */
+
+/* Large screens (desktops and laptops) */
+@media only screen and (min-width: 1024px) {
+    /* No changes required for large screens if your current layout works well */
+}
+
+/* Medium screens (tablets in landscape mode, small laptops) */
+@media only screen and (max-width: 1023px) {
+    .landingText h1 {
+        font-size: 45px; /* Adjust heading size */
+        margin-left: 0;  /* Center-align */
+        text-align: center;
+    }
+    
+    .sidebar {
+        width: 55px;
+    }
+
+    .sidebar:hover {
+        width: 180px;
+    }
+
+    .logo img {
+        margin-left: 0;
+    }
+
+    .navElements ul li a {
+        font-size: 18px;
+    }
+}
+
+/* Small screens (tablets in portrait mode, large smartphones) */
+@media only screen and (max-width: 768px) {
+    .landingText h1 {
+        font-size: 35px;
+    }
+    
+    .navElements {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navElements ul {
+        flex-direction: column;
+    }
+
+    .navElements ul li {
+        margin: 10px 0;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: static;
+        border-right: none;
+        flex-direction: row;
+    }
+
+    .sidebar:hover {
+        width: 100%;
+    }
+
+    .links {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    
+    .links li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .container {
+        height: auto;
+    }
+
+    .landingText {
+        padding: 100px 20px;
+    }
+}
+
+/* Extra-small screens (smartphones in portrait mode) */
+@media only screen and (max-width: 480px) {
+    .landingText h1 {
+        font-size: 28px;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+    }
+
+    .links li {
+        padding: 10px 0;
+    }
+    
+    .navElements ul li a {
+        font-size: 16px;
+        padding: 5px 10px;
+    }
+
+    .about h1 {
+        font-size: 2rem;
+    }
+    
+    .aboutContent {
+        flex-direction: column;
+        padding: 10px;
+    }
+    
+    .aboutContent .aboutText {
+        font-size: 18px;
+        text-align: left;
+    }
+}
